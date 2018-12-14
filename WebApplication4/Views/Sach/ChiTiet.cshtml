@@ -1,0 +1,67 @@
+﻿@model WebApplication4.Models.Sach
+@{
+    ViewData["Title"] = "ChiTiet";
+}
+
+<div class="product">
+    <div class="container">
+
+        <div class="product-price1">
+            <div class="top-sing">
+                <div class="col-md-7 single-top">
+                    <div class="flexslider">
+                        <div class="thumb-image"> <img src="~/@Model.Hinh" data-imagezoom="true" class="img-responsive"> </div>
+                    </div>
+
+                    <div class="clearfix"> </div>
+                    <!-- slide -->
+                    <!-- FlexSlider -->
+                    <script defer src="js/jquery.flexslider.js"></script>
+                    <link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen" />
+
+                    <script>
+                        // Can also be used with $(document).ready()
+                        $(window).load(function () {
+                            $('.flexslider').flexslider({
+                                animation: "slide",
+                                controlNav: "thumbnails"
+                            });
+                        });
+                    </script>
+
+                </div>
+                <div class="col-md-5 single-top-in simpleCart_shelfItem">
+                    <div class="single-para ">
+                        <h4>@Model.TuaSach</h4>
+                        <div class="star-on">
+
+                            <div class="review">
+                                <p><span style="font-weight:bold;">Tác giả :</span>@Model.TacGia</p>
+                                <p><span style="font-weight:bold;">Nhà xuất bản :</span>@Model.NhaXuatBan</p>
+                                <p><span style="font-weight:bold;">Số lượng :</span>@Model.SoLuong</p>
+                                <p><span style="font-weight:bold;">Năm xuất bản :</span>@Model.NamXuatBan</p>
+                            </div>
+                            <div class="clearfix"> </div>
+                        </div>
+
+                        <h5 class="item_price"></h5>
+                        <p>
+                            @Model.GioiThieu
+                        </p>
+                        <div class="available">
+                            
+                        </div>
+
+                        <a href="#" class="add-cart item_add"></a>
+
+                    </div>
+                </div>
+                <div class="clearfix"> </div>
+            </div>
+            <!---->
+        </div>
+
+        <div class="clearfix"> </div>
+    </div>
+</div>
+
